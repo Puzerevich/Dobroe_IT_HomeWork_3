@@ -1,10 +1,12 @@
 package week_3;
 
+import java.util.Arrays;
+
 /**
  * Created by Konstantin on 30.03.2018.
  */
 public class Filter {
-    // #1
+
     private static int FilterName(String str)
     {
         int res = 0;
@@ -20,7 +22,6 @@ public class Filter {
         return res;
     }
 
-    //#2
     public static Object CatDogGoodbye(Animal an_arr[]){
         int nElems = an_arr.length;
         Animal[] tmpArr = new Animal[nElems];
@@ -39,5 +40,19 @@ public class Filter {
     }
 
 
+    public static int []returnArr(int[]inputArray){
+        if (inputArray.length==0) {
+            return inputArray;
+        }
+        Arrays.sort(inputArray);
+        int []outputArray = new int[inputArray[inputArray.length-1]+1];
+
+        for (int i = 0; i <inputArray.length; i++) {
+            outputArray[inputArray[i]]++;
+        }
+        return outputArray;
+    }
 }
+
+
 
