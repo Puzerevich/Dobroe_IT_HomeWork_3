@@ -13,11 +13,11 @@ public class Main {
 //(Task 1) Create class and subclasses
 
         System.out.println("BEGIN TASK #1");
-        Animal dog1 = new Dog("Dog","Шарик",0.4);
-        Animal dog2 = new Dog("Dog","Гуффи",1.2);
-        Animal dog3 = new Dog("Dog","Мопсик",5.0);
-        Animal dog4 = new Dog("Dog","Жучка",8.2);
-        Animal dog5 = new Dog("Dog","Жирик",9.1);
+        Animal dog1 = new Dog("Шарик",0.4);
+        Animal dog2 = new Dog("Гуффи",1.2);
+        Animal dog3 = new Dog("Мопсик",5.0);
+        Animal dog4 = new Dog("Жучка",8.2);
+        Animal dog5 = new Dog("Жирик",9.1);
 
         System.out.print(dog1.toString());  dog1.voice();
         System.out.print(dog2.toString());  dog2.voice();
@@ -26,11 +26,11 @@ public class Main {
         System.out.print(dog5.toString());  dog5.voice();
 
         System.out.println("");
-        Animal cat1 = new Dog("Cat","Аякс",0.7);
-        Animal cat2 = new Dog("Cat","Базилио",1.0);
-        Animal cat3 = new Dog("Cat","Барсик",3.0);
-        Animal cat4 = new Dog("Cat","Пуфик",7.2);
-        Animal cat5 = new Dog("Cat","Феликс",8.1);
+        Animal cat1 = new Cat("Аякс",0.7);
+        Animal cat2 = new Cat("Базилио",1.0);
+        Animal cat3 = new Cat("Барсик",3.0);
+        Animal cat4 = new Cat("Пуфик",7.2);
+        Animal cat5 = new Cat("Феликс",8.1);
 
         System.out.print(cat1.toString());  cat1.voice();
         System.out.print(cat2.toString());  cat2.voice();
@@ -52,7 +52,7 @@ public class Main {
 
         System.out.println("\nArray of animals:\n");
         for (int i = 0; i < animal_arr.length; i++) {
-            System.out.print("Animal type: " + animal_arr[i].getAnimal_type() + "\nName: " + animal_arr[i].getName() + " \nAge: " + animal_arr[i].getAge() + " \n" + animal_arr[i].getName() + " say: ");
+            System.out.print("Animal type: "  + "\nName: " + animal_arr[i].getName() + " \nAge: " + animal_arr[i].getAge() + " \n" + animal_arr[i].getName() + " say: ");
             animal_arr[i].voice();
             System.out.println("");
         }
@@ -62,7 +62,7 @@ public class Main {
         animal_arr = (Animal[]) Filter.CatDogGoodbye(animal_arr);
            for (int i = 0; i < animal_arr.length; i++) {
               if (animal_arr[i] != null)
-               System.out.println("Animal type: " + animal_arr[i].getAnimal_type() + "Name: " + animal_arr[i].getName() + " Age: " + animal_arr[i].getAge() + " " + animal_arr[i].getName() + " say: ");
+               System.out.println("Animal type: "  + "Name: " + animal_arr[i].getName() + " Age: " + animal_arr[i].getAge() + " " + animal_arr[i].getName() + " say: ");
          }
 
 
@@ -81,7 +81,8 @@ public class Main {
         shelter.addAnimals(dog4);
         shelter.addAnimals(dog5);
 
-        shelter.printAnimals(Cat.class.getSimpleName(), 0, 8);
+       //  shelter.printAllAnimals(shelter);
+         shelter.printAllAnimals();
 
  // TASK 5
         System.out.println("\nBEGIN TASK #5");
