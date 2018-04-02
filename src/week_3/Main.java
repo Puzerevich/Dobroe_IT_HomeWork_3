@@ -3,7 +3,7 @@ package week_3;
 import java.util.Arrays;
 
 /**
- * Created by KOS on 18.03.2018.
+ * Created by KOS on 18.03.2018. WITH CORRECT
  */
 
 public class Main {
